@@ -32,10 +32,7 @@ const elements = {
 // Typing Animation Configuration
 const typingConfig = {
     words: [
-        'Video Editor',
-        'Graphic Designer',
-        'Creative Storyteller',
-        'Visual Artist'
+        'Video Editor'
     ],
     typeSpeed: 100,
     deleteSpeed: 50,

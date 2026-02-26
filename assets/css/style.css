@@ -563,6 +563,11 @@ body:hover .cursor-follower {
     margin-bottom: 1rem;
 }
 
+/* custom font for skills section title only */
+#skills .section-title {
+    font-family: Georgia, serif;
+}
+
 .section-subtitle {
     color: var(--text-secondary);
     font-size: 1.1rem;
@@ -671,7 +676,7 @@ body:hover .cursor-follower {
 }
 
 .about-heading {
-    font-family: var(--font-display);
+    font-family: Georgia, serif;
     font-size: 2rem;
     margin-bottom: 1.5rem;
     line-height: 1.3;
