@@ -44,7 +44,8 @@ const typingConfig = {
  */
 document.addEventListener('DOMContentLoaded', () => {
     initLoadingScreen();
-    initCursor();
+    // custom cursor removed, use default system cursor
+    // initCursor();
     initNavbar();
     initMobileMenu();
     initTypingAnimation();
@@ -124,62 +125,12 @@ function initHeroAnimations() {
 }
 
 /**
- * Custom Cursor
+ * Custom Cursor (disabled)
  */
 function initCursor() {
-    // Skip on touch devices
-    if (window.matchMedia('(pointer: coarse)').matches) {
-        elements.cursor.style.display = 'none';
-        elements.cursorFollower.style.display = 'none';
-        document.body.style.cursor = 'auto';
-        return;
-    }
-    
-    let mouseX = 0, mouseY = 0;
-    let cursorX = 0, cursorY = 0;
-    let followerX = 0, followerY = 0;
-    
-    document.addEventListener('mousemove', (e) => {
-        mouseX = e.clientX;
-        mouseY = e.clientY;
-    });
-    
-    // Smooth cursor animation
-    function animateCursor() {
-        // Cursor follows immediately
-        cursorX += (mouseX - cursorX) * 0.2;
-        cursorY += (mouseY - cursorY) * 0.2;
-        
-        // Follower lags behind
-        followerX += (mouseX - followerX) * 0.1;
-        followerY += (mouseY - followerY) * 0.1;
-        
-        elements.cursor.style.transform = `translate(${cursorX - 5}px, ${cursorY - 5}px)`;
-        elements.cursorFollower.style.transform = `translate(${followerX - 20}px, ${followerY - 20}px)`;
-        
-        requestAnimationFrame(animateCursor);
-    }
-    
-    animateCursor();
-    
-    // Hover effects
-    const hoverElements = document.querySelectorAll('a, button, .skill-card, .portfolio-item');
-    
-    hoverElements.forEach(el => {
-        el.addEventListener('mouseenter', () => {
-            elements.cursor.style.transform = 'translate(-50%, -50%) scale(1.5)';
-            elements.cursorFollower.style.transform = 'translate(-50%, -50%) scale(1.5)';
-            elements.cursorFollower.style.borderColor = 'transparent';
-            elements.cursorFollower.style.backgroundColor = 'rgba(59, 130, 246, 0.1)';
-        });
-        
-        el.addEventListener('mouseleave', () => {
-            elements.cursor.style.transform = 'translate(-50%, -50%) scale(1)';
-            elements.cursorFollower.style.transform = 'translate(-50%, -50%) scale(1)';
-            elements.cursorFollower.style.borderColor = 'var(--accent-primary)';
-            elements.cursorFollower.style.backgroundColor = 'transparent';
-        });
-    });
+    // custom cursor functionality removed
+    // keeping stub in case other code references it
+    document.body.style.cursor = 'auto';
 }
 
 /**

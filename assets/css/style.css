@@ -60,10 +60,11 @@ body {
     color: var(--text-primary);
     line-height: 1.6;
     overflow-x: hidden;
-    cursor: none;
+    cursor: auto; /* restored default pointer */
 }
 
-/* Custom Cursor */
+/* Custom cursor styles removed since standard cursor is used */
+/*
 .cursor {
     width: 10px;
     height: 10px;
@@ -92,6 +93,7 @@ body:hover .cursor,
 body:hover .cursor-follower {
     opacity: 1;
 }
+*/
 
 /* Scroll Progress */
 .scroll-progress {
