@@ -1,0 +1,14 @@
+{
+  "name": "serabportfolio",
+  "version": "1.0.0",
+  "description": "Serab Yonjan - Portfolio Website",
+  "private": true,
+  "scripts": {
+    "dev": "serve .",
+    "build": "echo 'Build successful'",
+    "lint": "echo 'Linting not configured'"
+  },
+  "dependencies": {
+    "@vercel/analytics": "^1.4.1"
+  }
+}
